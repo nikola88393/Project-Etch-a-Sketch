@@ -1,0 +1,32 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridContainer{
+    display: flex;
+    flex-direction: column;
+    border: solid red;
+    width: 500px;
+    height: 500px;
+    flex: 0 1 auto;
+}
+
+.gridContainer p {
+    display: flex;
+    flex: 1;
+    margin: 0;
+}
+
+.gridContainer div {
+    display: flex;
+    flex: 1;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+}
