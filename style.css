@@ -42,7 +42,7 @@ button {
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
-    width: 400px;
+    width: 450px;
     height: 50px;
 }
 
@@ -71,10 +71,14 @@ button {
 .purple{
     background-color: Purple;
 }
-.rainbow img {
+.colorContainer img {
     border-radius: 10px;
 }
 .rainbow {
+    padding: 0px;
+}
+.eraser {
+    background-color: white;
     padding: 0px;
 }
 

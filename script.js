@@ -15,6 +15,14 @@ function drawGrid(number = 16){
     reset();
 }
 
+function randomColor (){
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 function changeSize(){
     const buttons = document.querySelectorAll('.setSizeButtons');
     const grid = document.querySelector('.gridContainer');
@@ -38,7 +46,32 @@ function changeColor(){
     })
 }
 
-function draw(color = 'black'){
+function rainbowColor(){
+    const rainbow = document.querySelector('.rainbow');
+    rainbow.addEventListener('click', () => {
+        const gridElement = document.querySelectorAll('.gridContainer div');
+        gridElement.forEach(element => {
+        element.addEventListener('mouseenter', () =>{
+            element.style.backgroundColor = randomColor();
+        })
+    }); 
+    })
+}
+
+function eraser(){
+    const eraser = document.querySelector('.eraser');
+    eraser.addEventListener('click', () => {
+        const gridElement = document.querySelectorAll('.gridContainer div');
+        gridElement.forEach(element => {
+            element.addEventListener('mouseenter', () =>{
+                element.style.backgroundColor = 'white';
+            })
+        });
+    })
+       
+}
+
+function draw(color='black'){
     const gridElement = document.querySelectorAll('.gridContainer div');
     gridElement.forEach(element => {
         element.addEventListener('mouseenter', () =>{
@@ -60,5 +93,7 @@ function reset(){
 
 drawGrid();
 changeColor();
-changeSize()
+rainbowColor();
+changeSize();
+eraser();
 reset();
