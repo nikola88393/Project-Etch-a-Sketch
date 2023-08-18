@@ -12,7 +12,22 @@ function drawGrid(number = 16){
         }
         grid.appendChild(newLine);
     }
+    reset();
 }
+
+function changeSize(){
+    const buttons = document.querySelectorAll('.setSizeButtons');
+    const grid = document.querySelector('.gridContainer');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const size = prompt("Enter the new size of the grid: ");
+            grid.innerHTML = "";
+            drawGrid(Number(size));
+        })
+    })
+    reset();
+}
+
 function changeColor(){
     const colors = document.querySelectorAll('.colorContainer button');
     colors.forEach(element => {
@@ -32,16 +47,6 @@ function draw(color = 'black'){
     });   
 }
 
-
-function changeSize(){
-    
-}
-
-// function clearGrid(){
-//     const grid = document.querySelector('.gridcontainer');
-//     grid.innerHTML="";
-// }
-
 function reset(){
     const reset = document.querySelector('.reset');
     const gridElement = document.querySelectorAll('.gridContainer div');
@@ -52,7 +57,8 @@ function reset(){
     })
 }
 
-drawGrid(32);
+
+drawGrid();
 changeColor();
+changeSize()
 reset();
-clearGrid();
