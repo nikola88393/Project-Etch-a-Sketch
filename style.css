@@ -6,7 +6,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+button {
+    cursor: pointer;
+}
 .gridContainer{
     display: flex;
     flex-direction: column;
@@ -30,3 +32,45 @@ body {
 .buttonContainer {
     margin-top: 20px;
 }
+
+.colorContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    width: 400px;
+    height: 50px;
+}
+
+.colorContainer button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.black{
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.yellow {
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.purple{
+    background-color: Purple;
+}
+.rainbow img {
+    border-radius: 10px;
+}
+.rainbow {
+    padding: 0px;
+}
+
