@@ -6,7 +6,7 @@ function drawGrid(number = 16){
         for(let j = 1; j <= number; j++){
             const gridElement = document.createElement('div');
             gridElement.classList = 'gridElement';
-            gridElement.style.border = "1px solid black";
+            gridElement.style.border = "1px solid grey";
             newLine.appendChild(gridElement);
 
         }

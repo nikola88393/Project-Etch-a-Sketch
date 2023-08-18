@@ -9,10 +9,19 @@ body {
 button {
     cursor: pointer;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    padding: 20px;
+}
+
 .gridContainer{
     display: flex;
     flex-direction: column;
-    border: solid red;
+    border: 1px solid gray;
     width: 500px;
     height: 500px;
     flex: 0 1 auto;
@@ -35,6 +44,15 @@ button {
     margin-bottom: 10px;
     padding: 20px;
     border: 1px solid black;
+    gap: 25px;
+}
+
+.buttonContainer button {
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    background-color: aquamarine;
 }
 
 .colorContainer {
@@ -42,7 +60,7 @@ button {
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
-    width: 450px;
+    width: 500px;
     height: 50px;
 }
 
