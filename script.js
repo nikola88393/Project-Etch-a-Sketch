@@ -28,7 +28,14 @@ function changeSize(){
     const grid = document.querySelector('.gridContainer');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            const size = prompt("Enter the new size of the grid: ");
+            let size = prompt("Enter the new size of the grid: ");
+            if(size === "" || isNaN(size) || parseInt(size) <= 0){
+                alert("Invalid input!");
+                return;
+            }
+            else  if (size === null){
+                return;
+            }
             grid.innerHTML = "";
             drawGrid(Number(size));
         })
