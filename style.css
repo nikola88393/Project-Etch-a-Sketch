@@ -19,7 +19,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #0D0C1D;
+    border: 1px solid #0D0C1D;
     background-color:#F7F9F7;
     padding: 20px;
 }
@@ -31,6 +31,11 @@ h1{
     width: 500px;
     height: 500px;
     flex: 0 1 auto;
+}
+
+.gridElement {
+    border: 1px dotted black;
+    background-color: white;
 }
 
 .gridContainer p {

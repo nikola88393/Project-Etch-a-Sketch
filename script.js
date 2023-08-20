@@ -7,14 +7,27 @@ function drawGrid(number = 16){
         for(let j = 1; j <= number; j++){
             const gridElement = document.createElement('div');
             gridElement.classList = 'gridElement';
-            gridElement.style.border = "1px solid #161B33";
-            gridElement.style.backgroundColor = 'white';
             newLine.appendChild(gridElement);
 
         }
         grid.appendChild(newLine);
     }
     reset();
+}
+
+function toggleGrid(){
+    const toggle = document.querySelector('.toggleGrid');
+    const grid = document.querySelectorAll('.gridContainer div');
+    toggle.addEventListener("click", () => {
+        grid.forEach(element => {
+            if (!Toggle) {
+                element.style.border = 'none';
+            } else {
+                element.style.border = "1px dotted black";
+            }
+        })
+        Toggle = !Toggle; 
+    })
 }
 
 function randomColor (){
@@ -85,11 +98,12 @@ function draw(color='black'){
     gridElement.forEach(element => {
             element.addEventListener('mouseenter', () =>{
                 element.style.backgroundColor = color;
-
             })
 
-        });   
-    }
+        });  
+    toggleGrid();
+
+}
 
 function reset(){
     const reset = document.querySelector('.reset');
@@ -102,20 +116,6 @@ function reset(){
 }
 let Toggle = false;
 
-function toggleGrid(){
-    const toggle = document.querySelector('.toggleGrid');
-    const grid = document.querySelectorAll('.gridContainer div');
-    toggle.addEventListener("click", () => {
-        grid.forEach(element => {
-            if (Toggle) {
-                element.style.border = 'none';
-            } else {
-                element.style.border = "1px solid black";
-            }
-        })
-        Toggle = !Toggle;
-    })
-}
 
 
 drawGrid();
