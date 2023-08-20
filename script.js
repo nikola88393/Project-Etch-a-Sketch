@@ -6,7 +6,7 @@ function drawGrid(number = 16){
         for(let j = 1; j <= number; j++){
             const gridElement = document.createElement('div');
             gridElement.classList = 'gridElement';
-            gridElement.style.border = "1px solid grey";
+            gridElement.style.border = "1px solid #161B33";
             newLine.appendChild(gridElement);
 
         }
@@ -71,7 +71,7 @@ function eraser(){
         const gridElement = document.querySelectorAll('.gridContainer div');
         gridElement.forEach(element => {
             element.addEventListener('mouseenter', () =>{
-                element.style.backgroundColor = 'white';
+                element.style.backgroundColor = '#F7F9F7';
             })
         });
     })
